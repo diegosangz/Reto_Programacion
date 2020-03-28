@@ -30,8 +30,7 @@ namespace Reto_Programacion
             services.AddRazorPages();
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDbContext<Reto_ProgramacionContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("Reto_ProgramacionContext")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

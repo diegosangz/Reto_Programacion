@@ -9,7 +9,7 @@ using Reto_Programacion.Models;
 namespace Reto_Programacion.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20200327223346_InitialCreate")]
+    [Migration("20200328184650_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

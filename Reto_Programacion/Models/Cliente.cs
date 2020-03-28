@@ -27,7 +27,7 @@ namespace Reto_Programacion.Models
         [StringLength(50)]
         public string Cdad { get; set; }
 
-        [Display(Name = "Telefono Celular: ")]
+        [Display(Name = "Telefono Celular:  (###-####-####)")]
         [DataType(DataType.PhoneNumber)]
         [RegularExpression(@"^\(?([0-9]{3})\)?[-.●]?([0-9]{4})[-.●]?([0-9]{4})$", ErrorMessage = "El Numero de Telefono no es valido")]
         public string Tlfno { get; set; }
