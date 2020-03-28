@@ -9,8 +9,8 @@ using Reto_Programacion.Models;
 namespace Reto_Programacion.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20200328184650_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200328211616_ClientesATM")]
+    partial class ClientesATM
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

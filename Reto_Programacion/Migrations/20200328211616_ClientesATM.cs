@@ -2,7 +2,7 @@
 
 namespace Reto_Programacion.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class ClientesATM : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
