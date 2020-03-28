@@ -1,0 +1,58 @@
+﻿@page
+@model Reto_Programacion.Pages.ManejoClientes.DetailsModel
+
+@{
+    ViewData["Title"] = "Detalles del Cliente";
+}
+
+<br />
+<div class=" container row">
+    <div class="col-6">
+        <h1 class=" text-info">Detalles del Cliente</h1>
+    </div>
+</div>
+<hr />
+
+<h3>
+    <small class="text-muted">Datos del Cliente</small>
+</h3>
+
+<div class="container">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.NombreCliente)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.NombreCliente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Cncsn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Cncsn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Cdad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Cdad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.Tlfno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.Tlfno)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Cliente.ID" class=" btn btn-primary">Edit</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a asp-page="Index" class="btn btn-danger btn-sm">Cancelar</a>
+</div>

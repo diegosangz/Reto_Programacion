@@ -1,0 +1,64 @@
+﻿@page
+@model Reto_Programacion.Pages.ManejoClientes.CreateModel
+
+@{
+    ViewData["Title"] = "Crear Cliente";
+}
+
+<br />
+<div class=" container row">
+    <div class="col-6">
+        <h1 class=" text-info">Crear Cliente</h1>
+    </div>
+</div>
+<hr />
+
+      <h3>
+          <small class="text-muted">Datos del Cliente</small>
+      </h3>
+
+    <div class="container-fluid row">
+        <div class="col-form-label">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="Cliente.NombreCliente" class="control-label"></label>
+                    <input asp-for="Cliente.NombreCliente" class="form-control" />
+                    <span asp-validation-for="Cliente.NombreCliente" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cliente.Cncsn" class="control-label"></label>
+                    <input asp-for="Cliente.Cncsn" class="form-control" />
+                    <span asp-validation-for="Cliente.Cncsn" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cliente.Cdad" class="control-label"></label>
+                    <input asp-for="Cliente.Cdad" class="form-control" />
+                    <span asp-validation-for="Cliente.Cdad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cliente.Tlfno" class="control-label"></label>
+                    <input asp-for="Cliente.Tlfno" class="form-control" />
+                    <span asp-validation-for="Cliente.Tlfno" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cliente.Status" class="control-label"></label>
+                    <select id="myList" asp-for="Cliente.Status" class="form-control">
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                    <span asp-validation-for="Cliente.Status" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Crear" class="btn btn-primary" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a asp-page="Index" class="btn btn-danger btn-sm">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
