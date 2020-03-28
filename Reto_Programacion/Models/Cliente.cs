@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Reto_Programacion.Models
 {
-    //Creacion Base de Datos para Clientes
+    //Clase de modelado para los campos de la tabla clientes
     public class Cliente
     {
         [Key]

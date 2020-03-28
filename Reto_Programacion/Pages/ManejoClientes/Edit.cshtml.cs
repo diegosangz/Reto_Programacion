@@ -41,8 +41,7 @@ namespace Reto_Programacion.Pages.ManejoClientes
             return Page();
         }
 
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // Creacion de la funcionalidad para editar registro
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

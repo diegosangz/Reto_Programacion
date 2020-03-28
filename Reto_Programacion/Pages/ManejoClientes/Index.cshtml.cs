@@ -22,7 +22,8 @@ namespace Reto_Programacion.Pages.ManejoClientes
 
         [TempData]
         public string Mensaje { get; set; }
-
+        
+        //LLamado de los registros de la base de datos
         public async Task OnGetAsync()
         {
             Cliente = await _context.Cliente.ToListAsync();

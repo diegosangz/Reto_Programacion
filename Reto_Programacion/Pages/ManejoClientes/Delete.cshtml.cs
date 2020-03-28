@@ -40,6 +40,7 @@ namespace Reto_Programacion.Pages.ManejoClientes
             return Page();
         }
 
+        //Funcionalidad para actualizar el campo status del registro dentro de la tabla cliente
         public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (id == null)

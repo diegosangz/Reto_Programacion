@@ -20,6 +20,8 @@ namespace Reto_Programacion.Pages.ManejoClientes
 
         public Cliente Cliente { get; set; }
 
+        //LLamado a la informacion dentro de los campos de la tabla en la base de datos
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)

@@ -5,6 +5,7 @@
     ViewData["Title"] = "Detalles del Cliente";
 }
 
+<!-- Creacion de la vista formulario para la visualizacion  de los datos de un cliente. -->
 <br />
 <div class=" container row">
     <div class="col-6">
@@ -52,7 +53,7 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Cliente.ID" class=" btn btn-primary">Edit</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Cliente.ID" class=" btn btn-primary">Editar</a>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a asp-page="Index" class="btn btn-danger btn-sm">Cancelar</a>
 </div>

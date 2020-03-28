@@ -29,8 +29,7 @@ namespace Reto_Programacion.Pages.ManejoClientes
         [TempData]
         public string Mensaje { get; set; }
 
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // Creacion de la funcionalidad para crear registro
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

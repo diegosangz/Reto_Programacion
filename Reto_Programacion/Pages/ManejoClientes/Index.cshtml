@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Lista de Clientes";
 }
-
+<!-- Vista principal dentro del manejo de clientes -->
 <br />
 <div class=" container row">
     <div class="col-6">
@@ -15,7 +15,7 @@
     </div>
 </div>
 <hr />
-
+<!-- Mensaje de alerta al realizar alguna operacion CRUD dentro del aplicativo -->
 @if (Model.Mensaje != null)
 {
     <div class=" alert alert-info alert-dismissible" role="alert">
@@ -26,27 +26,28 @@
     </div>
 }
 
+<!-- Creacion y validacion de la vista para los registros de la BD -->
 @if (Model.Cliente.Count() > 0)
 {
-    <table class="table table-striped border table-responsive-md">
+    <table class="table table-striped border table-responsive-md text-center" align="center">
         <thead>
             <tr>
-                <th align="center">
+                <th>
                     @Html.DisplayNameFor(model => model.Cliente[0].NombreCliente)
                 </th>
-                <th align="center">
+                <th>
                     @Html.DisplayNameFor(model => model.Cliente[0].Cncsn)
                 </th>
-                <th align="center">
+                <th>
                     @Html.DisplayNameFor(model => model.Cliente[0].Cdad)
                 </th>
-                <th align="center">
+                <th>
                     @Html.DisplayNameFor(model => model.Cliente[0].Tlfno)
                 </th>
-                <th align="center">
+                <th>
                     @Html.DisplayNameFor(model => model.Cliente[0].Status)
                 </th>
-                <th align="center">
+                <th>
                     @Html.DisplayNameFor(model => model.Cliente[0].ID)
                 </th>
                 <th></th>
@@ -55,33 +56,33 @@
         <tbody>
             @foreach (var item in Model.Cliente)
             {
-            <tr>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.NombreCliente)
-                </td>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.Cncsn)
-                </td>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.Cdad)
-                </td>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.Tlfno)
-                </td>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>
-                <td align="center">
-                    @Html.DisplayFor(modelItem => item.ID)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-success btn-sm">Editar</a>
+                <tr>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => item.NombreCliente)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => item.Cncsn)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => item.Cdad)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => item.Tlfno)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-success btn-sm">Editar</a>
 
-                    <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-success btn-sm">Detalles</a>
+                        <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-success btn-sm">Detalles</a>
 
-                    <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-danger btn-sm">Borrar</a>
-                </td>
-            </tr>
+                        <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-danger btn-sm">Borrar</a>
+                    </td>
+                </tr>
             }
         </tbody>
     </table>
