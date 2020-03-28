@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -20,13 +21,23 @@ namespace Reto_Programacion.Pages.ManejoClientes
 
         public IList<Cliente> Cliente { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+
         [TempData]
         public string Mensaje { get; set; }
         
         //LLamado de los registros de la base de datos
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string SearchString)
         {
-            Cliente = await _context.Cliente.ToListAsync();
+            var clientsearch = from m in _context.Cliente
+                               select m;
+
+            if (!String.IsNullOrEmpty(SearchString))
+            {
+                clientsearch = clientsearch.Where(s => s.Cdad.Contains(SearchString));
+            }
+            Cliente = await clientsearch.ToListAsync();
         }
     }
 }

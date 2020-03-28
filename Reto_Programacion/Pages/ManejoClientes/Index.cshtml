@@ -1,4 +1,5 @@
 ﻿@page
+
 @model Reto_Programacion.Pages.ManejoClientes.IndexModel
 
 @{
@@ -15,6 +16,7 @@
     </div>
 </div>
 <hr />
+
 <!-- Mensaje de alerta al realizar alguna operacion CRUD dentro del aplicativo -->
 @if (Model.Mensaje != null)
 {
@@ -29,6 +31,18 @@
 <!-- Creacion y validacion de la vista para los registros de la BD -->
 @if (Model.Cliente.Count() > 0)
 {
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color align-content-center">
+        <p>
+            <label class="text-dark col-form-label"> Busqueda por Ciudad: </label>
+            <input type="text" asp-for="SearchString" class=" col-form-label-sm" />
+            <input type="submit" value="Buscar" class="btn btn-primary btn-sm" />
+            <a asp-page="./Index" class="btn btn-secondary btn-sm">Lista Completa</a>
+        </p>
+    </div>
+</form>
+
     <table class="table table-striped border table-responsive-md text-center" align="center">
         <thead>
             <tr>
